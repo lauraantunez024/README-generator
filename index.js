@@ -58,28 +58,29 @@ inquirer
   
     let readMeTemplate =  `
     
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    # ${title}
+- [Installation](#installation)
+- [Description](#description)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+# ${title}
 
-    ## Description
+## Description
 
-    ${description}
+${description}
 
-    ## Installation
-    
-    ${installation}
+## Installation
 
-    ## Usage
-    ${usage}
+${installation}
 
-    ## Credits
-    ${credits}
+## Usage
+${usage}
 
-    ## License
-    ${license}
+## Credits
+${credits}
+
+## License
+${license}
 
 
 `;
