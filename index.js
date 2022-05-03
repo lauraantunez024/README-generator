@@ -58,8 +58,8 @@ inquirer
   
     let readMeTemplate =  `
     
-- [Installation](#installation)
 - [Description](#description)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
@@ -84,26 +84,21 @@ ${license}
 
 
 `;
-createNewFile(title, readMeTemplate)
+writeToFile(title, readMeTemplate)
 
-
-    
-    
-
-
- 
 
 
   });
 
 
-  function createNewFile(fileName, data) {
-    fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
-        if(err) {
-            console.log(err)
-        } 
-        console.log("Your ReadMe is ready.")
-    })
+
+function writeToFile(fileName, data) {
+fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) => {
+    if(err) {
+        console.log(err)
+    } 
+    console.log("Your ReadMe is ready.")
+})
 
 };
 
