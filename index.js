@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { title } = require('process');
+
 
 
 
@@ -38,6 +38,24 @@ inquirer
       type: 'input',
       name: 'license',
       message: 'Add license information here. This lets other developers know what they can and cannot do with your project.',
+
+      type: 'input',
+      name: 'link',
+      message: 'link to github profile?',
+     
+      type: 'input',
+      name: 'contributing',
+      message: 'Explain how others can contribute to this project.',
+      
+      type: 'input',
+      name: 'tests',
+      message: 'Add license information here. This lets other developers know what they can and cannot do with your project.',
+      
+      
+      type: 'input',
+      name: 'email',
+      message: 'What is your email?',
+      
     }
 
   ])
@@ -49,8 +67,11 @@ inquirer
     description,
     usage,
     license,
-    credits
-
+    credits,
+    contributing, 
+    tests,
+    git,
+    email
 
 
 
@@ -82,6 +103,19 @@ ${credits}
 ## License
 ${license}
 
+## Contributing guidelines
+
+${contributing}
+
+## Tests
+
+${tests}
+
+## Questions
+
+[Github Profile](${git})
+
+My Email: ${email}
 
 `;
 writeToFile(title, readMeTemplate)
@@ -101,13 +135,3 @@ fs.writeFile(`./${fileName.toLowerCase().split(' ').join('')}.md`, data, (err) =
 })
 
 };
-
-
-
-
-// TODO: Create a function to initialize app
-
-
-// Function call to initialize app
-
-
