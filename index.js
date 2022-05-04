@@ -3,10 +3,6 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-
-
-
-
 inquirer
   .prompt([
     {
@@ -38,25 +34,21 @@ inquirer
       type: 'input',
       name: 'license',
       message: 'Add license information here. This lets other developers know what they can and cannot do with your project.',
-
+    }, {
       type: 'input',
-      name: 'link',
+      name: 'github',
       message: 'link to github profile?',
-     
+    }, {
       type: 'input',
       name: 'contributing',
       message: 'Explain how others can contribute to this project.',
-      
-      type: 'input',
-      name: 'tests',
-      message: 'Add license information here. This lets other developers know what they can and cannot do with your project.',
-      
+    },{
       
       type: 'input',
       name: 'email',
       message: 'What is your email?',
       
-    }
+     }
 
   ])
   .then(({
@@ -70,7 +62,7 @@ inquirer
     credits,
     contributing, 
     tests,
-    git,
+    github,
     email
 
 
@@ -113,7 +105,7 @@ ${tests}
 
 ## Questions
 
-[Github Profile](${git})
+[Github Profile](${github})
 
 My Email: ${email}
 
