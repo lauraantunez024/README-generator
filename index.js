@@ -58,6 +58,13 @@ inquirer
       message: 'What is your email?',
       
      }
+    },{
+      
+      type: 'input',
+      name: 'link',
+      message: 'Link or video of application?',
+      
+     }
 
   ])
   .then(({
@@ -83,6 +90,8 @@ inquirer
 # ${title}
 
 ## Table of Contents
+
+This project is cusing the ${license} license. 
     
 - [Description](#description)
 - [Installation](#installation)
@@ -126,6 +135,10 @@ If you have additional questions, you can reach me here:
 [Github Profile](${github})
 
 My Email: ${email}
+
+Link to deployed application or link to video to view:
+
+${link}
 
 `;
 writeToFile(title, readMeTemplate)
