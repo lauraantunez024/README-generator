@@ -31,10 +31,19 @@ inquirer
       message: 'Explain in detail how to use your project. Provide instructions and examples.'
     },
     {
-      type: 'input',
+      type: 'list',
       name: 'license',
       message: 'Add license information here. This lets other developers know what they can and cannot do with your project.',
-    }, {
+      choices: ['MIT', 'Apache 2.0', 'Mozilla Public License 2.0', 'The Unlicense']
+    }, 
+    {
+    
+    type: 'input',
+    name: 'tests',
+    message: 'What are the test instructions?',
+        
+       },
+    {
       type: 'input',
       name: 'github',
       message: 'link to github profile?',
@@ -70,13 +79,19 @@ inquirer
   })=>{
   
     let readMeTemplate =  `
+
+# ${title}
+
+## Table of Contents
     
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
-# ${title}
+- [Contributing guidelines](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Description
 
@@ -93,7 +108,8 @@ ${usage}
 ${credits}
 
 ## License
-${license}
+${license} 
+
 
 ## Contributing guidelines
 
@@ -104,6 +120,8 @@ ${contributing}
 ${tests}
 
 ## Questions
+
+If you have additional questions, you can reach me here:
 
 [Github Profile](${github})
 
