@@ -79,7 +79,8 @@ inquirer
     contributing, 
     tests,
     github,
-    email
+    email,
+    link
 
 
 
