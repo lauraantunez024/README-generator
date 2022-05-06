@@ -57,7 +57,7 @@ inquirer
       name: 'email',
       message: 'What is your email?',
       
-     }
+     
     },{
       
       type: 'input',
